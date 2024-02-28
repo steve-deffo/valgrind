@@ -1,0 +1,5 @@
+#!/bin/bash
+
+name=`docker ps --all | grep valgrind | awk '{print $(NF)}'`
+
+docker exec -it $name $1 $2

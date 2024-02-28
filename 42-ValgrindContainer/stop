@@ -1,0 +1,6 @@
+#!/bin/bash
+
+name=`docker ps --all | grep valgrind | awk '{print $(NF)}'`
+
+docker stop $name
+docker rm $name
